@@ -1,33 +1,33 @@
 name: Build and Deploy
+
 on:
   push:
     branches:
       - master
-jobs:
-  build:
-    runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [ 20.x ]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+        
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          node-version: '20'
+          
       - name: Install Dependencies
         run: npm ci
+        
       - name: Build Angular App
         run: npm run build
 
       - name: Deploy to gh pages
-        run: |
-          npx angular-cli-ghpages --dir=dist/couple-or/browser
-        env:
-          CI: true
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/angular-github-actions
+          enable_jekyll: true
