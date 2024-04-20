@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  #home-button {
+    position: absolute;
+    margin: 6px;
+    z-index: 1;
+  }
+
+  h1 {
+    margin: auto auto 5vh;
+  }
+
+  #app-page {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  #app-content {
+    display:flex;
+    flex-grow:1;
+  }
+}

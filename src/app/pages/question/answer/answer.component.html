@@ -1,0 +1,13 @@
+@if (answer) {
+  <div class="flip-card" [class.active]="show || isAnswerShown" (click)="showAnswer()">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <p>Réponse {{number}}</p>
+      </div>
+      <div class="flip-card-back">
+        <p>{{answer.answer}}</p>
+        <p>{{answer.percentage}}%</p>
+      </div>
+    </div>
+  </div>
+}

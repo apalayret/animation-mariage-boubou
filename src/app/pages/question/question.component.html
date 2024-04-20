@@ -1,0 +1,13 @@
+@if (question) {
+  <h3>{{question.question}}</h3>
+  @for (answer of question.answers; track answer; let index = $index) {
+    <app-answer [answer]="answer" [number]="index + 1" [isAnswerShown]="isAnswerShown" (answerSelected)="answerSelected(answer)"></app-answer>
+  }
+  @if (question.alternativeAnswers) {
+    <div id="alternative-answer" (click)="showAllAnswers()">
+      @if (isAnswerShown) {
+        {{question.alternativeAnswers.join(', ')}}
+      }
+    </div>
+  }
+}

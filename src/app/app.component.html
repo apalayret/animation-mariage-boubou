@@ -1,0 +1,11 @@
+<div [routerLink]="['/welcome']" id="home-button">
+  <img ngSrc="https://freerangestock.com:443/sample/119147/home-vector-icon.jpg" width="20" height="20" alt="logo home" />
+</div>
+<div id="app-page">
+  <div id="app-content">
+    <router-outlet></router-outlet>
+  </div>
+  <div id="app-footer">
+    <router-outlet name="footer"></router-outlet>
+  </div>
+</div>

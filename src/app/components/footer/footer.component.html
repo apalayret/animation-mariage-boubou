@@ -1,0 +1,29 @@
+@if (question) {
+  <div id="question-footer">
+    <div class="navigation">
+      @if (previousQuestion) {
+        <a [routerLink]="['/question', previousQuestion]">
+          <img ngSrc="https://cdn.iconscout.com/icon/free/png-512/free-down-arrow-3114439-2598217.png?f=webp&w=256"
+               width="50" height="50" alt="previous page" class="rotate90"/>
+        </a>
+      }
+    </div>
+    <div class="error-management"></div>
+    <div id="global-score">{{score}}</div>
+    <div class="error-management">
+      @for (error of errors; track index; let index = $index) {
+        <div [class.greyscale-1]="!error" (click)="addError()">
+          <img ngSrc="https://storage.needpix.com/rsynced_images/cancel-146131_1280.png" width="40" height="40" alt="no-error sign"/>
+        </div>
+      }
+    </div>
+    <div class="navigation">
+      @if (question.nextQuestion) {
+        <a [routerLink]="['/question', question.nextQuestion]">
+          <img ngSrc="https://cdn.iconscout.com/icon/free/png-512/free-down-arrow-3114439-2598217.png?f=webp&w=256"
+               width="50" height="50" alt="next page" class="rotate270"/>
+        </a>
+      }
+    </div>
+  </div>
+}
