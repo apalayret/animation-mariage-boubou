@@ -1,7 +1,10 @@
-<div [routerLink]="['/welcome']" id="home-button">
-  <img ngSrc="https://freerangestock.com:443/sample/119147/home-vector-icon.jpg" width="20" height="20" alt="logo home" />
-</div>
-<div id="app-page">
+<div id="app-page" [class.classic-theme]="isStyleClassic" [class.wedding-theme]="!isStyleClassic">
+  <div [routerLink]="['/welcome']" id="home-button">
+    <img ngSrc="https://freerangestock.com:443/sample/119147/home-vector-icon.jpg" width="20" height="20" alt="logo home" />
+  </div>
+  <div (click)="changeStyle()" id="theme-button">
+    <div></div>
+  </div>
   <div id="app-content">
     <router-outlet></router-outlet>
   </div>

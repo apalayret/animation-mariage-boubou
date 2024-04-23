@@ -29,19 +29,23 @@
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  //border-radius: 36px 12px 50px 36px;
+  border-radius: 36px;
+  //border: var(--text-color) solid 2px;
+  box-shadow: inset -2px 0 0 var(--text-color), inset 0 -2px 0 var(--text-color), inset 2px 0 0 var(--text-color), inset 0 2px 0 var(--text-color);
+  background: linear-gradient(90deg, var(--bg-color-answer-main) 70%, var(--bg-color-answer-secondary) 80%);
+  color: var(--text-color);
+  font-weight: bolder;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
   cursor: pointer;
 }
 
 /* Style the back side */
 .flip-card-back {
   background-color: dodgerblue;
-  color: white;
   transform: rotateX(180deg);
   display: flex;
   flex-direction: row;

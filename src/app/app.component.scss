@@ -8,6 +8,20 @@
     z-index: 1;
   }
 
+  #theme-button {
+    position: absolute;
+    right: 0;
+    margin: 6px;
+    z-index: 1;
+
+    & > div {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--color-other-theme);
+    }
+  }
+
   h1 {
     margin: auto auto 5vh;
   }
@@ -16,6 +30,8 @@
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    //background-color:var(--bg-color-main);
+    background: linear-gradient(180deg, var(--bg-color-main) 0, var(--bg-color-secondary) 100%);
   }
 
   #app-content {

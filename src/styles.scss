@@ -5,3 +5,21 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.classic-theme {
+  --bg-color-main: #00c8fc;
+  --bg-color-secondary: #0135a8;
+  --bg-color-answer-main: #0B146A;
+  --bg-color-answer-secondary: #D41CA4;
+  --text-color: #FFFFFF;
+  --color-other-theme: #FFFBF6;
+}
+
+.wedding-theme {
+  --bg-color-main: #FFFBF6;
+  --bg-color-secondary: #FFFBF6;
+  --bg-color-answer-main: #FFFBF6;
+  --bg-color-answer-secondary: #FFFBF6;
+  --text-color: #DD2F4A;
+  --color-other-theme: #006BB7;
+}
