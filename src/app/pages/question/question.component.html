@@ -1,3 +1,6 @@
+<img ngSrc="/assets/images/1075c1196020e4db060209e72a42c1aa.png" id="curlicue-top-right" height="483" width="517" />
+<img ngSrc="/assets/images/1075c1196020e4db060209e72a42c1aa.png" id="curlicue-bottom-left" height="483" width="517"/>
+
 @if (question) {
   <h3>{{question.question}}</h3>
   @for (answer of question.answers; track answer; let index = $index) {
@@ -5,11 +8,11 @@
   }
   @if (question.alternativeAnswers && isAnswerShown) {
     <div id="alternative-answer">
-      <h5>Réponses alternatives</h5>
+      <h4>Réponses alternatives</h4>
       @if (isAnswerShown) {
         {{question.alternativeAnswers.join(', ')}}
       }
     </div>
   }
 }
-<!--<img src="https://madeleine-hugo.my.canva.site/mariage/images/1075c1196020e4db060209e72a42c1aa.png" loading="lazy" height="300" width="300">-->
+

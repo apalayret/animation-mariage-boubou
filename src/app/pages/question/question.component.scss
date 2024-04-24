@@ -6,7 +6,7 @@
 
   h3 {
     margin: 20px auto;
-    color: var(--title-text-color);
+    color: var(--text-primary-color);
     font-size: xx-large;
     font-family: YAEw2GhSLyw-0;
   }
@@ -16,16 +16,36 @@
     width: 75%;
     margin: 15px auto;
     padding: 20px 0;
-    //box-shadow: inset -2px 0 0 var(--other-answer-border), inset 0 -2px 0 var(--other-answer-border), inset 2px 0 0 var(--other-answer-border), inset 0 2px 0 var(--other-answer-border);
-    box-shadow: inset -2px 0 0 black, inset 0 -2px 0 black, inset 2px 0 0 black, inset 0 2px 0 black;
+    color: var(--text-primary-color);
+    box-shadow: inset -2px 0 0 var(--text-primary-color), inset 0 -2px 0 var(--text-primary-color), inset 2px 0 0 var(--text-primary-color), inset 0 2px 0 var(--text-primary-color);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    h5 {
+    h4 {
       margin-top: 0;
     }
+  }
+
+  #curlicue-top-right {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -40px;
+    right: 45px;
+    clip-path: polygon(40% 0%, 75% 100%, 100% 100%, 100% 0%);
+    rotate: 40deg;
+  }
+
+  #curlicue-bottom-left {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 28px;
+    left: -18px;
+    clip-path: polygon(34% 19%, 8% 80%, 50% 71%, 50% 100%, 50% 26%);
+    rotate: -70deg;
   }
 }
