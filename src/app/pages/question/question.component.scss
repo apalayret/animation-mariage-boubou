@@ -9,14 +9,20 @@
   }
 
   #alternative-answer {
-    cursor: pointer;
     min-height: 50px;
     width: 75%;
     margin: 15px auto;
-    border: 2px solid black;
+    padding: 20px 0;
+    //box-shadow: inset -2px 0 0 var(--other-answer-border), inset 0 -2px 0 var(--other-answer-border), inset 2px 0 0 var(--other-answer-border), inset 0 2px 0 var(--other-answer-border);
+    box-shadow: inset -2px 0 0 black, inset 0 -2px 0 black, inset 2px 0 0 black, inset 0 2px 0 black;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h5 {
+      margin-top: 0;
+    }
   }
 }

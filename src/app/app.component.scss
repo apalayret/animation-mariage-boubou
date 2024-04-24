@@ -1,6 +1,9 @@
+@import "font";
+
 :host {
   display: flex;
   flex-direction: column;
+  font-family: YAEw2GhSLyw-0;
 
   #home-button {
     cursor: pointer;

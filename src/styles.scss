@@ -12,14 +12,18 @@ body {
   --bg-color-answer-main: #0B146A;
   --bg-color-answer-secondary: #D41CA4;
   --text-color: #FFFFFF;
+  --other-answer-border: #000000;
   --color-other-theme: #FFFBF6;
 }
 
 .wedding-theme {
   --bg-color-main: #FFFBF6;
+  //--bg-color-main: #FFF;
   --bg-color-secondary: #FFFBF6;
-  --bg-color-answer-main: #FFFBF6;
-  --bg-color-answer-secondary: #FFFBF6;
-  --text-color: #DD2F4A;
+  //--bg-color-secondary: #FFF;
+  --bg-color-answer-main: #CFF29B;
+  --bg-color-answer-secondary: #CFF29B;
+  --text-color: #F24495;
+  --other-answer-border: #408C1C;
   --color-other-theme: #006BB7;
 }
