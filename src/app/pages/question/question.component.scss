@@ -48,4 +48,14 @@
     clip-path: polygon(34% 19%, 8% 80%, 50% 71%, 50% 100%, 50% 26%);
     rotate: -70deg;
   }
+
+  #curlicue-bottom-middle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 28px;
+    left: calc(50% - 75px);
+    clip-path: polygon(50% 28%, 25% 31%, 25% 39%, 24% 39%, 24% 38%, 17% 39%, 10% 51%, 37% 59%, 33% 70%, 45% 82%, 57% 83%, 64% 44%, 65% 37%);
+    rotate: -80deg;
+  }
 }
