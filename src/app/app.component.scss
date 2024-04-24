@@ -3,12 +3,14 @@
   flex-direction: column;
 
   #home-button {
+    cursor: pointer;
     position: absolute;
     margin: 6px;
     z-index: 1;
   }
 
   #theme-button {
+    cursor: pointer;
     position: absolute;
     right: 0;
     margin: 6px;

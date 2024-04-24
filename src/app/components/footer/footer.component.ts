@@ -37,4 +37,8 @@ export class FooterComponent implements OnInit {
   public addError(): void {
     this.scoreService.addError();
   }
+
+  public askForAnswer() {
+    this.questionService.askForAnswer();
+  }
 }

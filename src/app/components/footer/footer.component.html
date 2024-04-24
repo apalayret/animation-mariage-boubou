@@ -8,7 +8,9 @@
         </a>
       }
     </div>
-    <div class="error-management"></div>
+    <div class="error-management">
+      <div (click)="askForAnswer()">Voir les réponses</div>
+    </div>
     <div id="global-score">{{score}}</div>
     <div class="error-management">
       @for (error of errors; track index; let index = $index) {

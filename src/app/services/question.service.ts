@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Observable, ReplaySubject} from "rxjs";
+import {Observable, ReplaySubject, Subject} from "rxjs";
 import {QuestionAnswers} from "../datas/questions-reponses";
 
 @Injectable({
@@ -7,6 +7,7 @@ import {QuestionAnswers} from "../datas/questions-reponses";
 })
 export class QuestionService {
   private pendingQuestion = new ReplaySubject<QuestionAnswers>(1);
+  private _askForAnswer$ = new Subject<void>();
 
   constructor() { }
 
@@ -16,5 +17,13 @@ export class QuestionService {
 
   public nextQuestion(question: QuestionAnswers): void {
     this.pendingQuestion.next(question)
+  }
+
+  public askForAnswer(): void {
+    this._askForAnswer$.next();
+  }
+
+  public get askForAnswer$(): Observable<void> {
+    return this._askForAnswer$.asObservable();
   }
 }

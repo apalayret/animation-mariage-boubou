@@ -38,6 +38,10 @@ export class QuestionComponent implements OnInit {
       this.questionService.nextQuestion(this.question);
       this.scoreService.resetErrors();
     });
+
+    this.questionService.askForAnswer$.subscribe(() => {
+      this.showAllAnswers();
+    })
   }
 
   public answerSelected(answer: Answer): void {
