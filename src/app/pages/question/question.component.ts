@@ -3,7 +3,7 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {Answer, datas, QuestionAnswers} from "../../datas/questions-reponses";
 import {AnswerComponent} from "./answer/answer.component";
 import {ScoreService} from "../../services/score.service";
-import {NgOptimizedImage} from "@angular/common";
+import {NgOptimizedImage, provideImgixLoader} from "@angular/common";
 import {QuestionService} from "../../services/question.service";
 
 @Component({
@@ -13,6 +13,9 @@ import {QuestionService} from "../../services/question.service";
     AnswerComponent,
     RouterLink,
     NgOptimizedImage
+  ],
+  providers: [
+    provideImgixLoader('https://apalayret.github.io/animation-mariage-boubou/'),
   ],
   templateUrl: './question.component.html',
   styleUrl: './question.component.scss'
