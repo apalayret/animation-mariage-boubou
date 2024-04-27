@@ -14,9 +14,6 @@ import {QuestionService} from "../../services/question.service";
     RouterLink,
     NgOptimizedImage
   ],
-  providers: [
-    provideImgixLoader('https://apalayret.github.io/animation-mariage-boubou/'),
-  ],
   templateUrl: './question.component.html',
   styleUrl: './question.component.scss'
 })
