@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgOptimizedImage} from "@angular/common";
+import {NgOptimizedImage, provideImgixLoader} from "@angular/common";
 import {QuestionService} from "../../services/question.service";
 import {datas, Errors, QuestionAnswers} from "../../datas/questions-reponses";
 import {ScoreService} from "../../services/score.service";
@@ -13,7 +13,10 @@ import {RouterLink} from "@angular/router";
     RouterLink
   ],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
+  providers: [
+    provideImgixLoader('https://apalayret.github.io/animation-mariage-boubou/'),
+  ],
 })
 export class FooterComponent implements OnInit {
   public question: QuestionAnswers | undefined;
