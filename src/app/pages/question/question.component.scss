@@ -11,6 +11,10 @@
     font-family: YAEw2GhSLyw-0;
   }
 
+  app-answer {
+    z-index: 1;
+  }
+
   #alternative-answer {
     min-height: 50px;
     width: 75%;
@@ -23,6 +27,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
     h4 {
       margin-top: 0;
