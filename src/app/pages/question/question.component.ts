@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, isDevMode, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {Answer, datas, QuestionAnswers} from "../../datas/questions-reponses";
 import {AnswerComponent} from "./answer/answer.component";
@@ -15,7 +15,7 @@ import {QuestionService} from "../../services/question.service";
     NgOptimizedImage
   ],
   providers: [
-    provideImgixLoader('https://apalayret.github.io/animation-mariage-boubou/'),
+    provideImgixLoader(isDevMode() ? 'http://localhost:4200/' : 'https://apalayret.github.io/animation-mariage-boubou/'),
   ],
   templateUrl: './question.component.html',
   styleUrl: './question.component.scss'

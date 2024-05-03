@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, isDevMode} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
 import {NgOptimizedImage, provideImgixLoader} from "@angular/common";
 
@@ -9,7 +9,7 @@ import {NgOptimizedImage, provideImgixLoader} from "@angular/common";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers: [
-    provideImgixLoader('https://apalayret.github.io/animation-mariage-boubou/'),
+    provideImgixLoader(isDevMode() ? 'http://localhost:4200/' : 'https://apalayret.github.io/animation-mariage-boubou/'),
   ],
 })
 export class AppComponent {

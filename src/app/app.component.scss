@@ -8,10 +8,13 @@
   #home-button {
     cursor: pointer;
     position: absolute;
-    width: 20px;
-    height: 20px;
     margin: 6px;
     z-index: 1;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   #theme-button {

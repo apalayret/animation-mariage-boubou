@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, isDevMode, OnInit} from '@angular/core';
 import {NgOptimizedImage, provideImgixLoader} from "@angular/common";
 import {QuestionService} from "../../services/question.service";
 import {datas, Errors, QuestionAnswers} from "../../datas/questions-reponses";
@@ -15,7 +15,7 @@ import {RouterLink} from "@angular/router";
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
   providers: [
-    provideImgixLoader('https://apalayret.github.io/animation-mariage-boubou/'),
+    provideImgixLoader(isDevMode() ? 'http://localhost:4200/' : 'https://apalayret.github.io/animation-mariage-boubou/'),
   ],
 })
 export class FooterComponent implements OnInit {
