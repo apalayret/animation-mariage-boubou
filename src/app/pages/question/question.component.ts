@@ -3,7 +3,7 @@ import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {Answer, datas, QuestionAnswers} from "../../datas/questions-reponses";
 import {AnswerComponent} from "./answer/answer.component";
 import {ScoreService} from "../../services/score.service";
-import {NgOptimizedImage, provideImgixLoader} from "@angular/common";
+import {NgClass, NgOptimizedImage, provideImgixLoader} from "@angular/common";
 import {QuestionService} from "../../services/question.service";
 
 @Component({
@@ -12,7 +12,8 @@ import {QuestionService} from "../../services/question.service";
   imports: [
     AnswerComponent,
     RouterLink,
-    NgOptimizedImage
+    NgOptimizedImage,
+    NgClass
   ],
   providers: [
     provideImgixLoader(isDevMode() ? 'http://localhost:4200/' : 'https://apalayret.github.io/animation-mariage-boubou/'),
@@ -53,5 +54,13 @@ export class QuestionComponent implements OnInit {
 
   public showAllAnswers(): void {
     this.isAnswerShown = true;
+  }
+
+  getClassCurlicue(modulo: number, result: number) {
+    const resultTest = (((this.question?.id ?? 0) % modulo) === result);
+    return {
+      'hide': !resultTest,
+      'fade-in': resultTest
+    }
   }
 }

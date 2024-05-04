@@ -109,4 +109,22 @@
     }
   }
 
+  #curlicue-* {
+    opacity: 0;
+  }
+  .fade-in {
+    //opacity: 1;
+    //animation: fadeIn 2s;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+  }
+  .hide {
+    //opacity: 0;
+    //animation: fadeOut 2s;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+
 }
