@@ -89,7 +89,8 @@ export class QuestionComponent implements OnInit {
     const resultTest = (((this.question?.id ?? 0) % modulo) === result);
     return {
       'hide': !resultTest,
-      'fade-in': resultTest
+      'fade-in': resultTest,
+      'curlicue': true
     }
   }
 }
