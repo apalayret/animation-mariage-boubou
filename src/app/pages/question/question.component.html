@@ -26,7 +26,7 @@
   @for (answer of question.answers; track answer; let index = $index) {
     <app-answer [answer]="answer" [number]="index + 1" [isAnswerShown]="isAnswerShown[index]" (answerSelected)="answerSelected(answer)"></app-answer>
   }
-  @if (question.alternativeAnswers && isAnswerShown[question.answers.length + 1]) {
+  @if (question.alternativeAnswers && isAnswerShown[question.answers.length]) {
     <div id="alternative-answer">
       <h4>Réponses alternatives</h4>
       @if (isAnswerShown) {

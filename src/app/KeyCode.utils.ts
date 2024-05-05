@@ -9,7 +9,9 @@ export enum KeyCode {
   NUMPAD_7 = 'Numpad7',
   NUMPAD_8 = 'Numpad8',
   NUMPAD_9 = 'Numpad9',
+  NUMPAD_ENTER = 'NumpadEnter',
   KEY_X = 'KeyX',
   ARROW_LEFT = 'ArrowLeft',
   ARROW_RIGHT = 'ArrowRight',
+  ENTER = 'Enter'
 }
