@@ -2,7 +2,7 @@
   <div id="question-footer">
     <div class="navigation">
       @if (previousQuestion) {
-        <a [routerLink]="['/question', previousQuestion]">
+        <a (click)="previous()">
           <img ngSrc="/assets/images/arrow.png" width="512" height="512" alt="previous page" class="rotate90"/>
         </a>
       }
@@ -20,7 +20,7 @@
     </div>
     <div class="navigation">
       @if (question.nextQuestion) {
-        <a [routerLink]="['/question', question.nextQuestion]">
+        <a (click)="next()">
           <img ngSrc="/assets/images/arrow.png" width="512" height="512" alt="next page" class="rotate270"/>
         </a>
       }

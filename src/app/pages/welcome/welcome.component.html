@@ -1,6 +1,11 @@
 <h1>❤️ Un Couple en Or ❤️</h1>
-<img ngSrc="/assets/images/boubou_love.jpg" width="618" height="464" />
-<div>
-  Petit texte explicatif pour expliquer l'explication du jeu.
+<div id="presentation">
+  <div id="image-presentation">
+    <img ngSrc="/assets/images/boubou_love.jpg" width="618" height="464" />
+  </div>
+  <div id="text-explanatory">
+    <p>Petit texte explicatif pour expliquer l'explication du jeu.</p>
+    <p>Petit texte explicatif pour expliquer l'explication du jeu. Parce qu'il faut bien expliquer comment ça fonctionne</p>
+    <button [routerLink]="['/question', '1']">Commencer</button>
+  </div>
 </div>
-<button [routerLink]="['/question', '1']">Commencer</button>

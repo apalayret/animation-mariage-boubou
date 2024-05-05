@@ -1,9 +1,6 @@
-<div id="app-page" [class.classic-theme]="isStyleClassic" [class.wedding-theme]="!isStyleClassic">
+<div id="app-page" class="wedding-theme">
   <div [routerLink]="['/welcome']" id="home-button">
     <img ngSrc="/assets/images/home.jpg" width="970" height="970" alt="logo home" />
-  </div>
-  <div (click)="changeStyle()" id="theme-button">
-    <div></div>
   </div>
   <div id="app-content">
     <router-outlet></router-outlet>

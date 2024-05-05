@@ -35,7 +35,7 @@
   backface-visibility: hidden;
   border-radius: 18px;
   box-shadow: 2px 2px 2px #cdcdcd;
-  background: linear-gradient(90deg, var(--bg-color-answer-main) 70%, var(--bg-color-answer-secondary) 80%);
+  background: var(--bg-color-answer);
   color: var(--text-secondary-color);
   font-weight: bolder;
 }

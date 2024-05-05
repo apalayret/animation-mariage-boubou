@@ -14,9 +14,4 @@ import {NgOptimizedImage, provideImgixLoader} from "@angular/common";
 })
 export class AppComponent {
   title = 'couple-or';
-  public isStyleClassic = false;
-
-  public changeStyle(): void {
-    this.isStyleClassic = !this.isStyleClassic;
-  }
 }

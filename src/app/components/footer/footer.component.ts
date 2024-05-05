@@ -36,14 +36,10 @@ export class FooterComponent implements OnInit {
         this.addError();
         break;
       case KeyCode.ARROW_LEFT:
-        if (this.previousQuestion) {
-          this.router.navigate(['/question', this.previousQuestion]);
-        }
+        this.previous();
         break;
       case KeyCode.ARROW_RIGHT:
-        if (this.question?.nextQuestion) {
-          this.router.navigate(['/question', this.question?.nextQuestion]);
-        }
+        this.next();
         break;
     }
   }
@@ -65,5 +61,21 @@ export class FooterComponent implements OnInit {
 
   public askForAnswer() {
     this.questionService.askForAnswer();
+  }
+
+  public previous() {
+    if (this.previousQuestion) {
+      this.router.navigate(['/question', this.previousQuestion]);
+    } else {
+      this.router.navigate(['/welcome']);
+    }
+  }
+
+  public next() {
+    if (this.question?.nextQuestion) {
+      this.router.navigate(['/question', this.question?.nextQuestion]);
+    } else {
+      this.router.navigate(['end']);
+    }
   }
 }

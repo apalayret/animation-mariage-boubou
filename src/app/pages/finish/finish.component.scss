@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
 
-  #presentation {
+  #finish {
     display: flex;
     align-items: center;
     flex: 1;
@@ -17,7 +17,7 @@
     }
   }
 
-  #image-presentation {
+  #image-finish {
     display: flex;
 
     & > img {
@@ -25,22 +25,11 @@
     }
   }
 
-  #text-explanatory {
+  #text-finish {
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-  }
-
-  button {
-    padding: 20px 40px;
-    font-size: 2rem;
-    border-radius: 18px;
-    border: none;
-    box-shadow: 2px 2px 2px #cdcdcd;
-    cursor: pointer;
-    background-color: var(--bg-color-answer);
-    color: var(--text-secondary-color);
   }
 }
