@@ -1,10 +1,11 @@
-import {Component, isDevMode, OnInit} from '@angular/core';
+import {Component, HostListener, isDevMode, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {Answer, datas, QuestionAnswers} from "../../datas/questions-reponses";
 import {AnswerComponent} from "./answer/answer.component";
 import {ScoreService} from "../../services/score.service";
 import {NgClass, NgOptimizedImage, provideImgixLoader} from "@angular/common";
 import {QuestionService} from "../../services/question.service";
+import {KeyCode} from "../../KeyCode.utils";
 
 @Component({
   selector: 'app-question',
@@ -23,7 +24,27 @@ import {QuestionService} from "../../services/question.service";
 })
 export class QuestionComponent implements OnInit {
   public question: QuestionAnswers | undefined;
-  public isAnswerShown: boolean = false;
+  public isAnswerShown: boolean[] = [];
+
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    switch (event.code) {
+      case KeyCode.NUMPAD_0:
+        this.showAllAnswers();
+        break;
+      case KeyCode.NUMPAD_1:
+      case KeyCode.NUMPAD_2:
+      case KeyCode.NUMPAD_3:
+      case KeyCode.NUMPAD_4:
+      case KeyCode.NUMPAD_5:
+      case KeyCode.NUMPAD_6:
+      case KeyCode.NUMPAD_7:
+      case KeyCode.NUMPAD_8:
+      case KeyCode.NUMPAD_9:
+        this.showAnswer(+event.code.match(/\d+/)![0] - 1);
+        break;
+    }
+  }
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -32,12 +53,12 @@ export class QuestionComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.isAnswerShown = false;
       this.question = datas.find(questionAnswer => questionAnswer.id === +params['id']);
       if (!this.question) {
         this.router.navigate(['/welcome']);
         return;
       }
+      this.isAnswerShown = Array(this.question.answers.length + 1).fill(false);
       this.question.answers.sort(((answerA, answerB) => answerA.percentage < answerB.percentage ? 1 : -1));
       this.questionService.nextQuestion(this.question);
       this.scoreService.resetErrors();
@@ -52,8 +73,16 @@ export class QuestionComponent implements OnInit {
     this.scoreService.addToScore(answer.percentage);
   }
 
+  private showAnswer(number: number): void {
+    const answer = this.question?.answers?.at(number);
+    if (answer && !this.isAnswerShown[number]) {
+      this.isAnswerShown[number] = true;
+      this.answerSelected(answer)
+    }
+  }
+
   public showAllAnswers(): void {
-    this.isAnswerShown = true;
+    this.isAnswerShown = this.isAnswerShown.map(() => true);
   }
 
   getClassCurlicue(modulo: number, result: number) {

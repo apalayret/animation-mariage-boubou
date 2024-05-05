@@ -33,10 +33,8 @@
   justify-content: space-around;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  //border-radius: 36px 12px 50px 36px;
-  border-radius: 36px;
-  //border: var(--text-color) solid 2px;
-  box-shadow: inset -2px 0 0 var(--text-secondary-color), inset 0 -2px 0 var(--text-secondary-color), inset 2px 0 0 var(--text-secondary-color), inset 0 2px 0 var(--text-secondary-color);
+  border-radius: 18px;
+  box-shadow: 2px 2px 2px #cdcdcd;
   background: linear-gradient(90deg, var(--bg-color-answer-main) 70%, var(--bg-color-answer-secondary) 80%);
   color: var(--text-secondary-color);
   font-weight: bolder;
