@@ -20,6 +20,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    color: var(--bg-color-answer-main);
 
     img {
       width: 40px;
@@ -30,7 +31,7 @@
   #global-score {
     min-width: 50px;
     text-align: center;
-    font-size: xx-large;
+    font-size: 3rem;
   }
 }
 
