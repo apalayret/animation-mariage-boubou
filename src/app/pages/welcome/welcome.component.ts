@@ -25,6 +25,7 @@ export class WelcomeComponent {
     switch (event.code) {
       case KeyCode.ENTER:
       case KeyCode.NUMPAD_ENTER:
+      case KeyCode.ARROW_RIGHT:
         this.router.navigate(['/question', this.firstQuestion]);
         break;
     }
