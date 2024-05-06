@@ -6,11 +6,8 @@
   align-items: center;
 
   #logo-presentation {
-    width: 400px;
-    height: 400px;
-    //background-image: url('/assets/images/logo.jpeg');
-    //background-size: contain;
-    //background-repeat: no-repeat;
+    width: 600px;
+    height: 600px;
     mix-blend-mode: multiply;
 
     img {
@@ -46,25 +43,11 @@
 
   #image-presentation-left img {
     clip-path: polygon(0 0, 50% 0, 51% 26%, 56% 29%, 30% 100%, 0 100%);
+    margin: 0 0 0 2%;
   }
 
   #image-presentation-right img {
     clip-path: polygon(54% 0, 51% 28%, 56% 28%, 50% 100%, 50% 100%, 100% 100%, 100% 0);
-    margin: 0 0 0 -100%;
-  }
-
-  #start-button {
-    margin-bottom: 30px;
-  }
-
-  button {
-    padding: 20px 40px;
-    font-size: 2rem;
-    border-radius: 18px;
-    border: none;
-    box-shadow: 2px 2px 2px #cdcdcd;
-    cursor: pointer;
-    background-color: var(--bg-color-answer);
-    color: var(--text-secondary-color);
+    margin: 0 0 0 -80%;
   }
 }

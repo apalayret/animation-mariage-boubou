@@ -25,8 +25,7 @@
     min-height:100vh;
     display:flex;
     flex-direction:column;
-    //background-color:var(--bg-color-main);
-    background: linear-gradient(180deg, var(--bg-color-main) 0, var(--bg-color-secondary) 100%);
+    background-color:var(--bg-color-main);
   }
 
   #app-content {

@@ -2,13 +2,10 @@
   <div id="image-presentation-left">
     <img ngSrc="/assets/images/fleurs_welcome.png" width="1600" height="800" />
   </div>
-  <div id="logo-presentation">
+  <div id="logo-presentation" [routerLink]="['/question', '1']">
     <img ngSrc="/assets/images/logo.jpeg" width="1024" height="1024">
   </div>
   <div id="image-presentation-right">
     <img ngSrc="/assets/images/fleurs_welcome.png" width="1600" height="800" />
   </div>
-</div>
-<div id="start-button">
-  <button [routerLink]="['/question', '1']">Commencer</button>
 </div>
