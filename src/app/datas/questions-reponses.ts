@@ -23,7 +23,7 @@ export const datas: QuestionAnswers[] = [
         percentage: 21
       },
       {
-        answer: 'Pour une vie plus tranquille (Provence…)',
+        answer: 'Vie plus tranquille (Provence…)',
         percentage: 17
       },
       {
@@ -47,7 +47,7 @@ export const datas: QuestionAnswers[] = [
         percentage: 8
       },
       {
-        answer: 'Pour la cuisine (rosé, pastis et bouillabaisse)',
+        answer: 'Gastronomie (rosé, pastis et bouillabaisse)',
         percentage: 6
       }
     ],
@@ -113,7 +113,7 @@ export const datas: QuestionAnswers[] = [
         percentage: 24
       },
       {
-        answer: 'Sourire',
+        answer: 'Son sourire',
         percentage: 13
       },
       {
@@ -121,7 +121,7 @@ export const datas: QuestionAnswers[] = [
         percentage: 13
       },
       {
-        answer: 'Yeux',
+        answer: 'Ses yeux',
         percentage: 11
       },
       {
@@ -153,7 +153,7 @@ export const datas: QuestionAnswers[] = [
     question: 'Qu\'est-ce qu\'une "bonne soirée" pour Madeleine et Hugo ?',
     answers: [
       {
-        answer: 'À boire',
+        answer: 'À boire !',
         percentage: 35
       },
       {
@@ -169,7 +169,7 @@ export const datas: QuestionAnswers[] = [
         percentage: 6
       },
       {
-        answer: 'Etre tout les deux',
+        answer: 'Être tout les deux',
         percentage: 6
       },
       {
@@ -192,11 +192,11 @@ export const datas: QuestionAnswers[] = [
     question: 'Quelles sont les activités préférées de Madeleine le dimanche ?',
     answers: [
       {
-        answer: 'Planche a voile',
+        answer: 'Planche à voile',
         percentage: 19
       },
       {
-        answer: 'Se ballader (calanques, plage)',
+        answer: 'Se balader (calanques, plage)',
         percentage: 17
       },
       {
@@ -264,7 +264,7 @@ export const datas: QuestionAnswers[] = [
         percentage: 7
       },
       {
-        answer: 'Lire le journal (L\'Equipe)',
+        answer: 'Lire le journal (L\'Équipe)',
         percentage: 7
       }
     ],
