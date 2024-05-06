@@ -24,6 +24,7 @@ import {KeyCode} from "../../KeyCode.utils";
 })
 export class QuestionComponent implements OnInit {
   public question: QuestionAnswers | undefined;
+  public isAnswerCorrect: boolean[] = [];
   public isAnswerShown: boolean[] = [];
 
   @HostListener('window:keyup', ['$event'])
@@ -58,6 +59,7 @@ export class QuestionComponent implements OnInit {
         this.router.navigate(['/welcome']);
         return;
       }
+      this.isAnswerCorrect = Array(this.question.answers.length + 1).fill(false);
       this.isAnswerShown = Array(this.question.answers.length + 1).fill(false);
       this.question.answers.sort(((answerA, answerB) => answerA.percentage < answerB.percentage ? 1 : -1));
       this.questionService.nextQuestion(this.question);
@@ -69,15 +71,12 @@ export class QuestionComponent implements OnInit {
     })
   }
 
-  public answerSelected(answer: Answer): void {
-    this.scoreService.addToScore(answer.percentage);
-  }
-
-  private showAnswer(number: number): void {
+  public showAnswer(number: number): void {
     const answer = this.question?.answers?.at(number);
     if (answer && !this.isAnswerShown[number]) {
+      this.isAnswerCorrect[number] = true;
       this.isAnswerShown[number] = true;
-      this.answerSelected(answer)
+      this.scoreService.addToScore(answer.percentage);
     }
   }
 

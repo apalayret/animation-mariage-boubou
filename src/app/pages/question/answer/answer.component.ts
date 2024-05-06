@@ -11,6 +11,7 @@ import {Answer} from "../../../datas/questions-reponses";
 export class AnswerComponent {
   @Input() answer: Answer | undefined;
   @Input() number: number | undefined;
+  @Input() isAnswerCorrect: boolean = false;
   @Input() isAnswerShown: boolean = false;
   @Output() answerSelected: EventEmitter<void> = new EventEmitter();
   public show: boolean = false;

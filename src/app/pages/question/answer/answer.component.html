@@ -1,5 +1,5 @@
 @if (answer) {
-  <div class="flip-card" [class.active]="show || isAnswerShown" (click)="showAnswer()">
+  <div class="flip-card" [class.active]="show || isAnswerShown" [class.correct]="isAnswerCorrect" (click)="showAnswer()">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <p>Réponse {{number}}</p>
