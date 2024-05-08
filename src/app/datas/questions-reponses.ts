@@ -146,7 +146,7 @@ export const datas: QuestionAnswers[] = [
       'Son attention aux autres',
       'Son esprit',
     ],
-    nextQuestion: 4
+    nextQuestion: 7
   },
   {
     id: 4,
@@ -184,8 +184,7 @@ export const datas: QuestionAnswers[] = [
     alternativeAnswers: [
       'Balade',
       'De la rigolade'
-    ],
-    nextQuestion: 5
+    ]
   },
   {
     id: 5,
@@ -315,7 +314,8 @@ export const datas: QuestionAnswers[] = [
     alternativeAnswers: [
       'Plage',
       'Marché'
-    ]
+    ],
+    nextQuestion: 5
   }
 
 ]
