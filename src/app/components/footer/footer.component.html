@@ -19,11 +19,9 @@
       }
     </div>
     <div class="navigation">
-      @if (question.nextQuestion) {
-        <a (click)="next()">
-          <img ngSrc="/assets/images/arrow.png" width="512" height="512" alt="next page" class="rotate270"/>
-        </a>
-      }
+      <a (click)="next()">
+        <img ngSrc="/assets/images/arrow.png" width="512" height="512" alt="next page" class="rotate270"/>
+      </a>
     </div>
   </div>
 }

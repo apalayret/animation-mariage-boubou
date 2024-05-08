@@ -18,14 +18,13 @@ import {datas} from "../../datas/questions-reponses";
   ],
 })
 export class FinishComponent {
-  public firstQuestion: number = datas.find(question => question.nextQuestion && !datas.find(q => q.nextQuestion === question.id))?.id ?? 0;
+  public lastQuestion: number = datas.find(question => !question.nextQuestion)?.id ?? 0;
 
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
     switch (event.code) {
-      case KeyCode.ENTER:
-      case KeyCode.NUMPAD_ENTER:
-        this.router.navigate(['/question', this.firstQuestion]);
+      case KeyCode.ARROW_LEFT:
+        this.router.navigate(['/question', this.lastQuestion]);
         break;
     }
   }

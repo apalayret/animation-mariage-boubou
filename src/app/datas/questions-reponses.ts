@@ -47,14 +47,14 @@ export const datas: QuestionAnswers[] = [
         percentage: 8
       },
       {
-        answer: 'Gastronomie (rosé, pastis et bouillabaisse)',
-        percentage: 6
+        answer: 'Jul',
+        percentage: 2
       }
     ],
     alternativeAnswers: [
+      'Gastronomie (rosé, pastis et bouillabaisse)',
       'Italie',
-      'Activité sportive (randonnée et voile)',
-      'Jul',
+      'Randonnée et voile',
       'L\'accent'
     ],
     nextQuestion: 2
@@ -65,7 +65,7 @@ export const datas: QuestionAnswers[] = [
     answers: [
       {
         answer: 'Tout (ou presque)',
-        percentage: 16
+        percentage: 18
       },
       {
         answer: 'Rassurant / Fiable / Calme',
@@ -76,16 +76,16 @@ export const datas: QuestionAnswers[] = [
         percentage: 14
       },
       {
-        answer: 'Gentillesse / Bienveillance',
-        percentage: 10
+        answer: 'Gentillesse / Bienveillance / Douceur',
+        percentage: 16
       },
       {
         answer: 'Cuisinier hors pair',
         percentage: 10
       },
       {
-        answer: 'Douceur / Tendresse',
-        percentage: 8
+        answer: 'Il met toujours du rosé au frais',
+        percentage: 2
       },
       {
         answer: 'Leadership / Prestance / Assurance / Entreprenant',
@@ -137,14 +137,14 @@ export const datas: QuestionAnswers[] = [
         percentage: 7
       },
       {
-        answer: 'Humour',
-        percentage: 5
+        answer: 'Elle a toujours du rosé',
+        percentage: 2
       }
     ],
     alternativeAnswers: [
+      'Humour',
       'Son attention aux autres',
       'Son esprit',
-      'Elle a toujours du rosé',
     ],
     nextQuestion: 4
   },
@@ -220,13 +220,13 @@ export const datas: QuestionAnswers[] = [
         percentage: 7
       },
       {
-        answer: 'Cuisiner',
-        percentage: 7
+        answer: 'Faire des mots fléchés',
+        percentage: 3
       }
     ],
     alternativeAnswers: [
+      'Cuisiner',
       'Passer du temps en famille',
-      'Faire des mots fléchés',
       'Prendre le train pour Paris'
     ],
     nextQuestion: 6
@@ -300,8 +300,8 @@ export const datas: QuestionAnswers[] = [
         percentage: 7
       },
       {
-        answer: 'Plage',
-        percentage: 6
+        answer: 'Train',
+        percentage: 5
       },
       {
         answer: 'Paris',
@@ -313,7 +313,7 @@ export const datas: QuestionAnswers[] = [
       }
     ],
     alternativeAnswers: [
-      'Train',
+      'Plage',
       'Marché'
     ]
   }
