@@ -10,7 +10,7 @@
     <div class="error-management">
       <div (click)="askForAnswer()">Voir les réponses</div>
     </div>
-    <div id="global-score">{{score}}</div>
+    <div id="global-score"></div>
     <div class="error-management">
       @for (error of errors; track index; let index = $index) {
         <div [class.greyscale-1]="!error" (click)="addError()">

@@ -272,7 +272,7 @@ export const datas: QuestionAnswers[] = [
       'Passer du temps avec Madeleine',
       'Faire de la musique'
     ],
-    nextQuestion: 7
+    nextQuestion: 4
   },
   {
     id: 7,
